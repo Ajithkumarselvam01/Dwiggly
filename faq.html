@@ -1,0 +1,174 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Title</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+
+		<!-- Bootstrap CSS v5.2.1 -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous"
+		/>
+		
+	</head>
+
+	<style>
+		/* FAQ Section Start */
+.faq-section .faqs-container {
+    overflow: hidden;
+    background: #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section .faq-singular {
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.faq-singular:last-child {
+    border-bottom: none;
+}
+
+.faq-singular .faq-question {
+    position: relative;
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.faq-singular .faq-question span.number {
+    font-size: 32px;
+    color: #9d9da1;
+    font-weight: 700;
+    margin-right: 15px;
+}
+
+.faq-singular .faq-question span.text {
+    flex: 1;
+}
+
+.faq-singular .faq-question:after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    color: #ffffff;
+    background: #ff914d;
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 32px;
+    height: 32px;
+    width: 32px;
+    transition: transform 0.3s ease;
+}
+
+.faq-singular.active .faq-question:after {
+    content: "×";
+    transform: rotate(90deg);
+}
+
+.faq-singular .faq-answer {
+    display: none;
+    padding: 15px 0 0 50px;
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.faq-singular.active .faq-answer {
+    display: block;
+}
+
+/* FAQ Section End */
+
+		
+	</style> 
+
+	<body>
+	<section class="faq-section-sec">
+        <div class="faq-section">
+			<h3 class="sub-heading my-4">Frequently Asked Questions</h3>
+			<div class="faqs-container">
+				<div class="faq-singular">
+					<h3 class="faq-question">
+						<span class="number">01</span>
+						<span class="text">What is included in pet boarding?</span>
+					</h3>
+					<div class="faq-answer">
+						Our pet boarding services include 24/7 care, personalized feeding schedules, playtime, and regular updates with photos and notes. We ensure your pet feels at home with plenty of socialization and attention.
+					</div>
+				</div>
+		
+				<div class="faq-singular">
+					<h3 class="faq-question">
+						<span class="number">02</span>
+						<span class="text">What services does Dwiggly provide?</span>
+					</h3>
+					<div class="faq-answer">
+						Dwiggly offers pet grooming, boarding, and special playtime services to ensure your pet’s happiness and health.
+					</div>
+				</div>
+		
+				<div class="faq-singular">
+					<h3 class="faq-question">
+						<span class="number">03</span>
+						<span class="text">How is Dwiggly different from other pet services?</span>
+					</h3>
+					<div class="faq-answer">
+						Dwiggly prioritizes personalized care, innovative grooming techniques, and regular updates to pet owners, making us stand out in quality and reliability.
+					</div>
+				</div>
+		
+				<!-- Add more FAQ items as needed -->
+			</div>
+		</div>
+    </section>
+		
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+			integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+			crossorigin="anonymous"
+		></script>
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+    const faqItems = document.querySelectorAll(".faq-singular");
+
+    faqItems.forEach(function (faq) {
+        faq.addEventListener("click", function () {
+            // Collapse all items
+            faqItems.forEach(item => {
+                item.classList.remove("active");
+                item.querySelector(".faq-answer").style.display = "none";
+            });
+
+            // Toggle clicked item
+            if (!faq.classList.contains("active")) {
+                faq.classList.add("active");
+                faq.querySelector(".faq-answer").style.display = "block";
+            }
+        });
+    });
+});
+
+			
+			</script>
+	</body>
+</html>
